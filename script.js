@@ -38,7 +38,7 @@ $(".search").on("click", function (event) {
 
   var ingredients = $("#ingredients").val();
   var queryURL = "https://api.spoonacular.com/recipes/findByIngredients?ingredients=" + ingredients + "&number=5&apiKey=427db252e7484fb8be64ae2392879b2e";
-  );
+});
 
 
 
