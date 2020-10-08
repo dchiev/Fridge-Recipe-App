@@ -22,19 +22,21 @@ $(".search").on("click", function (event) {
 
 
 $.ajax({
-  url: "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=chicken,rice,cheese&key=AIzaSyBo1tqJ0ySHIiCkSVqxphvMPpJrCSKDLYQ",
+  url: "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=chicken,rice,cheese&key=AIzaSyAnyIr0SyrbaQETex7dGCU_nF8Sv_foBRU",
   method: "GET"
 }).then(function (response) {
   console.log(response);
-  var createDiv = $("<div>")
 
-  var thumbnail = $("<img>").text(response.items[0].snippet.thumbnails.default.url);
+  var thumbnail = (response.items[0].snippet.thumbnails.default.url);
+  var url = "https://youtube.com/watch?v=" + response.items[0].id.videoId
+  var name = response.items[0].snippet.title
   console.log(response.items[0].snippet.thumbnails.default.url)
-  var url = $(".recipe").href("youtube.com/watch?v=" + (response.items[0].id.videoId))
   console.log("youtube.com/watch?v=" + (response.items[0].id.videoId))
 
-  createDiv.append(thumbnail, url);
-  $(".recipe").html("<h1>" + url + "</h1>");
+  $(".Recipe").append(`<a href=${url}>${name}</a>`)
+  var image = $("<img>").attr("src", thumbnail);
+  $(".Recipe").append(image)
+  $(".Recipe").append(`<img src=${thumbnail}>`)
 }
 
 );
