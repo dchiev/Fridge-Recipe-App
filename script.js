@@ -4,6 +4,7 @@ var input3 = $("#input3");
 var searchButton = $("button");
 
 
+
 $(".search").on("click", function (event) {
   event.preventDefault();
 
@@ -33,6 +34,7 @@ $(".search").on("click", function (event) {
     var mealId = response.meals[0].idMeal
   });
 
+
   var queryURLRecipe = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772" + mealId
   $.ajax({
     url: queryURLRecipe,
@@ -50,6 +52,7 @@ $(".search").on("click", function (event) {
 
     //initial search to generate recipe list
 
+
   });
 
 
@@ -65,6 +68,32 @@ $(".search").on("click", function (event) {
     console.log(response.items[0].snippet.thumbnails.default.url)
     console.log("youtube.com/watch?v=" + (response.items[0].id.videoId))
 
+//   }
+
+//   );
+// });
+
+
+
+$.ajax({
+  url: "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=chicken,rice,cheese&key=AIzaSyAnyIr0SyrbaQETex7dGCU_nF8Sv_foBRU",
+  method: "GET"
+}).then(function (response) {
+  console.log(response);
+
+  var thumbnail = (response.items[0].snippet.thumbnails.default.url);
+  var url = "https://youtube.com/watch?v=" + response.items[0].id.videoId
+  var name = response.items[0].snippet.title
+  console.log(response.items[0].snippet.thumbnails.default.url)
+  console.log("youtube.com/watch?v=" + (response.items[0].id.videoId))
+
+  $(".Recipe").append(`<a href=${url}>${name}</a>`)
+  var image = $("<img>").attr("src", thumbnail);
+  $(".Recipe").append(image)
+  $(".Recipe").append(`<img src=${thumbnail}>`)
+}
+
+);
     $(".Recipe").append(`<a href=${url}>${name}</a>`)
     var image = $("<img>").attr("src", thumbnail);
     $(".Recipe").append(image)
@@ -72,3 +101,4 @@ $(".search").on("click", function (event) {
   }
 
   )});
+
