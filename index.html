@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,35 +15,25 @@
 </head>
 
 <nav class="uk-navbar-container" uk-navbar>
-    <div class="uk-navbar-left">
-
+    <div class="uk-navbar-right">
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="#">Active</a></li>
-            <li>
-                <a href="#">Parent</a>
-                <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li class="uk-active"><a href="#">Active</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="#">Item</a></li>
+            <li class="uk-active"><a href="#">Recipe</a></li>
+            <li class="uk-active"><a href="#">Facts</a></li>
+            <li class="uk-active"><a href="#">Blog</a></li>
+            <li class="uk-active"><a href="#">About</a></li>
         </ul>
 
     </div>
 </nav>
 
-<div class="hero-image">
-    <div class="hero-text">
-      <h1 style="font-size:50px">Fridge Recipes</h1> 
-      <form class="search">
-        <span uk-search-icon></span>
-        <input class="uk-search-input" type="search" placeholder="Ingredients">
-    </form>
-    </div>
-  </div>
+<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
+    data-src="Pictures/FridgePiciture.jpeg" uk-img>
+    <h1>Fridge Recipe</h1>
+</div>
+
+<form class="uk-search uk-search-default">
+    <input class="uk-search-input" type="search" placeholder="Search...">
+</form>
 
 
 <div class="Recipe">
@@ -51,6 +42,7 @@
 
 <body>
 
-<script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
