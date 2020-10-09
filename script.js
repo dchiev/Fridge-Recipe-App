@@ -1,11 +1,11 @@
 var input1 = $("#input1");
 var input2 = $("#input2");
 var input3 = $("#input3");
-var searchButton = $("button");
+var searchButton = $("#button");
 
 
 
-$(".search").on("click", function (event) {
+searchButton.on("click", function (event) {
   event.preventDefault();
 
   var ingredient1 = input1.val();
@@ -24,81 +24,86 @@ $(".search").on("click", function (event) {
   }).then(function (response) {
     console.log(response);
     // display top recipe
-    var newRecipeImage = ("<img>").attr("src", response.meals[0].strMealThumb)
-    var newRecipeName = ("<h3>").text(response.meals[0].strMeal)
 
-    $("#recipe").append(newRecipeName);
-    newRecipeName.append(newRecipeImage);
-
+  /*   $("#recipe").append(newRecipeName);
+    $("#recipe").append(newRecipeImage);
+ */
 
     var mealId = response.meals[0].idMeal
-  });
+    console.log(mealId);
 
 
-  var queryURLRecipe = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772" + mealId
-  $.ajax({
-    url: queryURLRecipe,
-    method: "GET"
-  }).then(function (response) {
-    console.log(response);
+    var queryURLRecipe = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + mealId
+    $.ajax({
+      url: queryURLRecipe,
+      method: "GET"
+    }).then(function (response) {
+      console.log(response);
+      var newRecipeName = ("<h3>").text(response.meals[0].strMeal)
+      var newRecipeImage = ("<img>").attr("src", response.meals[0].strMealThumb)
+      var mealInstructions = ("<p>").text(response.meals[0].strInstructions);
+      var foodCountry = ("<p>").text(response.meals[0].strArea);
+      var ingredientList1 = ("<li>").text(response.meals[0].strIngredient1);
+      var ingredientList2 = ("<li>").text(response.meals[0].strIngredient2);
+      var ingredientList3 = ("<li>").text(response.meals[0].strIngredient3);
+      var ingredientList4 = ("<li>").text(response.meals[0].strIngredient4);
+      var ingredientList5 = ("<li>").text(response.meals[0].strIngredient6);
 
-    var mealInstructions = ("<p>").text(response.meals[0].strInstructions)
-    // var foodCountry = ("<p>").text(response.meals[0].strArea);
-    var ingredient1 = ("<li>").text(response.meals[0].strIngredient1)
-    var ingredient2 = ("<li>").text(response.meals[0].strIngredient2)
-    var ingredient3 = ("<li>").text(response.meals[0].strIngredient3)
-    var ingredient4 = ("<li>").text(response.meals[0].strIngredient4)
-    var ingredient5 = ("<li>").text(response.meals[0].strIngredient6)
-
-    //initial search to generate recipe list
-
-
-  });
-
-
-  $.ajax({
-    url: "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=chicken,rice,cheese&key=AIzaSyAnyIr0SyrbaQETex7dGCU_nF8Sv_foBRU",
-    method: "GET"
-  }).then(function (response) {
-    console.log(response);
-
-    var thumbnail = (response.items[0].snippet.thumbnails.default.url);
-    var url = "https://youtube.com/watch?v=" + response.items[0].id.videoId
-    var name = response.items[0].snippet.title
-    console.log(response.items[0].snippet.thumbnails.default.url)
-    console.log("youtube.com/watch?v=" + (response.items[0].id.videoId))
-
-//   }
-
-//   );
-// });
+      $("#recipe").append(newRecipeName);
+      $("#recipe").append(newRecipeImage);
+      $("#recipe").append(mealInstructions);
+      $("#recipe").append(foodCountry);
+      $("#recipe").append(ingredientList1);
+      $("#recipe").append(ingredientList2);
+      $("#recipe").append(ingredientList3);
+      $("#recipe").append(ingredientList4);
+      $("#recipe").append(ingredientList5);
 
 
+    });
 
-$.ajax({
-  url: "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=chicken,rice,cheese&key=AIzaSyAnyIr0SyrbaQETex7dGCU_nF8Sv_foBRU",
-  method: "GET"
-}).then(function (response) {
-  console.log(response);
 
-  var thumbnail = (response.items[0].snippet.thumbnails.default.url);
-  var url = "https://youtube.com/watch?v=" + response.items[0].id.videoId
-  var name = response.items[0].snippet.title
-  console.log(response.items[0].snippet.thumbnails.default.url)
-  console.log("youtube.com/watch?v=" + (response.items[0].id.videoId))
+    $.ajax({
+      url: "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=chicken,rice,cheese&key=AIzaSyAnyIr0SyrbaQETex7dGCU_nF8Sv_foBRU",
+      method: "GET"
+    }).then(function (response) {
+      console.log(response);
 
-  $(".Recipe").append(`<a href=${url}>${name}</a>`)
-  var image = $("<img>").attr("src", thumbnail);
-  $(".Recipe").append(image)
-  $(".Recipe").append(`<img src=${thumbnail}>`)
-}
+      var thumbnail = (response.items[0].snippet.thumbnails.default.url);
+      var url = "https://youtube.com/watch?v=" + response.items[0].id.videoId
+      var name = response.items[0].snippet.title
+      console.log(response.items[0].snippet.thumbnails.default.url)
+      console.log("youtube.com/watch?v=" + (response.items[0].id.videoId))
 
-);
-    $(".Recipe").append(`<a href=${url}>${name}</a>`)
-    var image = $("<img>").attr("src", thumbnail);
-    $(".Recipe").append(image)
-    $(".Recipe").append(`<img src=${thumbnail}>`)
-  }
 
-  )});
+
+
+      $.ajax({
+        url: "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=chicken,rice,cheese&key=AIzaSyAnyIr0SyrbaQETex7dGCU_nF8Sv_foBRU",
+        method: "GET"
+      }).then(function (response) {
+        console.log(response);
+
+        var thumbnail = (response.items[0].snippet.thumbnails.default.url);
+        var url = "https://youtube.com/watch?v=" + response.items[0].id.videoId
+        var name = response.items[0].snippet.title
+        console.log(response.items[0].snippet.thumbnails.default.url)
+        console.log("youtube.com/watch?v=" + (response.items[0].id.videoId))
+
+        $(".Recipe").append(`<a href=${url}>${name}</a>`)
+        var image = $("<img>").attr("src", thumbnail);
+        $(".Recipe").append(image)
+        $(".Recipe").append(`<img src=${thumbnail}>`)
+      }
+
+      );
+      $(".Recipe").append(`<a href=${url}>${name}</a>`)
+      var image = $("<img>").attr("src", thumbnail);
+      $(".Recipe").append(image)
+      $(".Recipe").append(`<img src=${thumbnail}>`)
+    }
+
+    )
+  })
+});
 
