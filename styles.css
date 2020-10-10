@@ -1,13 +1,36 @@
-.search{
-    align-items: center;
+#nav,#button{
+    background-color:green;
+       
 }
 
-.hero-image {
-    background-image: url("/Users/Anna/Fridge-Recipe-App/Pictures");
-    background-color: #cccccc;
-    height: 500px; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 50%;
-  }
+h1{
+    /* text-align:center; */
+    color: white;
+    font-size:30px;
+    font-weight: bold;
+}
+ #button{
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.container-list,.uk-margin, #button{
+    margin:auto;
+    width: 50%;
+    padding: 10px;
+    background-color: green;
+}
+
+
+#input1,#input2,#input3{
+    color: black;
+    border-color:black;
+}
+
+#hero-image{
+    width: auto;
+    height: 716px;
+    opacity: 0.63;
+}

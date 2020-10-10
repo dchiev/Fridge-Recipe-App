@@ -5,48 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Links for UI Kit, Jquery, and custom styling-->
-    <link rel="stylesheet" href=".css/uikit.min.css" />
-    <script src=".js/uikit.min.js"></script>
-    <script src=".js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./styles.css" />
     <title>Fridge Recipe App</title>
 </head>
 
-<nav class="uk-navbar-container" uk-navbar>
-    <div class="uk-navbar-left">
-
+<nav class="uk-navbar-container" id="nav" uk-navbar>
+    <h1 class=“uk-heading-medium”>Fridge App</h1>
+    <div class="uk-navbar-right">
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="#">Active</a></li>
-            <li>
-                <a href="#">Parent</a>
-                <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li class="uk-active"><a href="#">Active</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="#">Item</a></li>
+            <li class="uk-active"><a href="#">Recipe</a></li>
+            <li class="uk-active"><a href="#">Facts</a></li>
+            <li class="uk-active"><a href="#">Blog</a></li>
+            <li class="uk-active"><a href="#">About</a></li>
         </ul>
-
     </div>
 </nav>
 
-<div class="hero-image">
-    <div class="hero-text">
-        <h1 style="font-size:50px">Fridge Recipes</h1>
-        <form class="search">
-            <span uk-search-icon></span>
-            <input class="uk-search-input" type="search" placeholder="Ingredients">
-        </form>
+<!-- <div class="container"> -->
+<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
+    data-src="Pictures/FridgePiciture.jpeg" id="hero-image" uk-img>
+
+    <div class="container-list">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="uk-margin">
+                    <form class="uk-search uk-search-default">
+                        <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input1">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-margin">
+            <form class="uk-search uk-search-default">
+                <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input2">
+            </form>
+        </div>
+
+        <div class="uk-margin">
+            <form class="uk-search uk-search-default">
+                <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input3">
+            </form>
+        </div>
+        <p uk-margin>
+            <button class="uk-button uk-button-primary" id="button">Search</button>
+        </p>
     </div>
+    <!-- </div> -->
+
 </div>
 
-
-<div class="Recipe">
+<div class="container">
+    <div class="Recipe">
+        <div class="uk-card uk-card-default uk-card-large uk-card-body">
+            <h3 class="uk-card-title">Recipe</h3>
+        </div>
+    </div>
 </div>
 
 <body>
