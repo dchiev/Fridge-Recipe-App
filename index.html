@@ -13,7 +13,8 @@
     <title>Fridge Recipe App</title>
 </head>
 
-<nav class="uk-navbar-container" uk-navbar>
+<nav class="uk-navbar-container" id="nav" uk-navbar>
+    <h1 class=“uk-heading-medium”>Fridge App</h1>
     <div class="uk-navbar-right">
         <ul class="uk-navbar-nav">
             <li class="uk-active"><a href="#">Recipe</a></li>
@@ -21,43 +22,50 @@
             <li class="uk-active"><a href="#">Blog</a></li>
             <li class="uk-active"><a href="#">About</a></li>
         </ul>
-
     </div>
 </nav>
 
+<!-- <div class="container"> -->
 <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
-    data-src="Pictures/FridgePiciture.jpeg" uk-img>
-    <h1>Fridge Recipe</h1>
+    data-src="Pictures/FridgePiciture.jpeg" id="hero-image" uk-img>
 
-    <div class="uk-margin">
-        <form class="uk-search uk-search-default">
-            <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input1">
-        </form>
-    </div>
+    <div class="container-list">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="uk-margin">
+                    <form class="uk-search uk-search-default">
+                        <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input1">
+                    </form>
+                </div>
+            </div>
+        </div>
 
-    <div class="uk-margin">
-        <form class="uk-search uk-search-default">
-            <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input2">
-        </form>
-    </div>
+        <div class="uk-margin">
+            <form class="uk-search uk-search-default">
+                <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input2">
+            </form>
+        </div>
 
-    <div class="uk-margin">
-        <form class="uk-search uk-search-default">
-            <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input3">
-        </form>
+        <div class="uk-margin">
+            <form class="uk-search uk-search-default">
+                <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input3">
+            </form>
+        </div>
+        <p uk-margin>
+            <button class="uk-button uk-button-primary" id="button">Search</button>
+        </p>
     </div>
-    <p uk-margin>
-        <button class="uk-button uk-button-primary" id="button">Search</button>
-    </p>
+    <!-- </div> -->
+
 </div>
 
-
-
-<div class="Recipe">
+<div class="container">
+    <div class="Recipe">
         <div class="uk-card uk-card-default uk-card-large uk-card-body">
             <h3 class="uk-card-title">Recipe</h3>
         </div>
     </div>
+</div>
 
 <body>
 
