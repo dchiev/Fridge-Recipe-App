@@ -39,25 +39,40 @@ searchButton.on("click", function (event) {
       method: "GET"
     }).then(function (response) {
       console.log(response);
-      var newRecipeName = ("<h3>").text(response.meals[0].strMeal)
-      var newRecipeImage = ("<img>").attr("src", response.meals[0].strMealThumb)
-      var mealInstructions = ("<p>").text(response.meals[0].strInstructions);
-      var foodCountry = ("<p>").text(response.meals[0].strArea);
-      var ingredientList1 = ("<li>").text(response.meals[0].strIngredient1);
-      var ingredientList2 = ("<li>").text(response.meals[0].strIngredient2);
-      var ingredientList3 = ("<li>").text(response.meals[0].strIngredient3);
-      var ingredientList4 = ("<li>").text(response.meals[0].strIngredient4);
-      var ingredientList5 = ("<li>").text(response.meals[0].strIngredient6);
+      var newRecipeName = $("<h3>").text(response.meals[0].strMeal)
+      var newRecipeImage = $("<img>").attr("src", response.meals[0].strMealThumb)
+      var mealInstructions = $("<p>").text(response.meals[0].strInstructions);
+      var foodCountry = $("<p>").text(response.meals[0].strArea);
+      var ingredientList1 = $("<li>").text(response.meals[0].strIngredient1);
+      var ingredientList2 = $("<li>").text(response.meals[0].strIngredient2);
+      var ingredientList3 = $("<li>").text(response.meals[0].strIngredient3);
+      var ingredientList4 = $("<li>").text(response.meals[0].strIngredient4);
+      var ingredientList5 = $("<li>").text(response.meals[0].strIngredient5);
+      var ingredientList6 = $("<li>").text(response.meals[0].strIngredient6);
+      var ingredientList7 = $("<li>").text(response.meals[0].strIngredient7);
+      var ingredientList8 = $("<li>").text(response.meals[0].strIngredient8);
+      var ingredientList9 = $("<li>").text(response.meals[0].strIngredient9);
+      var ingredientList10 = $("<li>").text(response.meals[0].strIngredient10);
+      var ingredientList11 = $("<li>").text(response.meals[0].strIngredient11);
 
-      $("#recipe").append(newRecipeName);
-      $("#recipe").append(newRecipeImage);
-      $("#recipe").append(mealInstructions);
-      $("#recipe").append(foodCountry);
-      $("#recipe").append(ingredientList1);
-      $("#recipe").append(ingredientList2);
-      $("#recipe").append(ingredientList3);
-      $("#recipe").append(ingredientList4);
-      $("#recipe").append(ingredientList5);
+
+      $(".Recipe").append(newRecipeName);
+      $(".Recipe").append(newRecipeImage);
+      $(".Recipe").append(mealInstructions);
+      $(".Recipe").append(foodCountry);
+      $(".Recipe").append(ingredientList1);
+      $(".Recipe").append(ingredientList2);
+      $(".Recipe").append(ingredientList3);
+      $(".Recipe").append(ingredientList4);
+      $(".Recipe").append(ingredientList5);
+      $(".Recipe").append(ingredientList6);
+      $(".Recipe").append(ingredientList7);
+      $(".Recipe").append(ingredientList8);
+      $(".Recipe").append(ingredientList9);
+      $(".Recipe").append(ingredientList8);
+      $(".Recipe").append(ingredientList9);
+      $(".Recipe").append(ingredientList10);
+      $(".Recipe").append(ingredientList11);
 
 
     });
