@@ -13,8 +13,78 @@ searchButton.on("click", function (event) {
     var ingredient3 = input3.val();
     // replace spaces from inputs
 
+<<<<<<< HEAD
     var ingredients = ingredient1 + "," + ingredient2 + "," + ingredient3;
     ingredients.replace(/ /g, "_");
+=======
+  var ingredients = ingredient1 + "," + ingredient2 + "," + ingredient3;
+  ingredients.replace(/ /g, "_");
+
+  var queryURL = "https://www.themealdb.com/api/json/v2/9973533/filter.php?i=" + ingredients
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function (response) {
+    console.log(response);
+    // display top recipe
+
+  /*   $("#recipe").append(newRecipeName);
+    $("#recipe").append(newRecipeImage);
+ */
+
+    var mealId = response.meals[0].idMeal
+    console.log(mealId);
+
+
+    var queryURLRecipe = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + mealId
+    $.ajax({
+      url: queryURLRecipe,
+      method: "GET"
+    }).then(function (response) {
+      console.log(response);
+      var newRecipeName = $("<h3 id='recipeName'>").text(response.meals[0].strMeal)
+      var newRecipeImage = $("<img id='recipeImage'>").attr("src", response.meals[0].strMealThumb)
+      var instructions = $("<h4 id='instructions'>").text("Instructions: ")
+      var mealInstructions = $("<p id='mealInstructions'>").text(response.meals[0].strInstructions);
+      var foodCountry = $("<h4 id='foodCountry'>").text("Cuisine: " + response.meals[0].strArea);
+      var ingredients = $("<h4 id='ingredients'>").text("Ingredients: ")
+      var ingredientList1 = $("<li id='list'>").text(response.meals[0].strIngredient1);
+      var ingredientList2 = $("<li id='list'>").text(response.meals[0].strIngredient2);
+      var ingredientList3 = $("<li id='list'>").text(response.meals[0].strIngredient3);
+      var ingredientList4 = $("<li id='list'>").text(response.meals[0].strIngredient4);
+      var ingredientList5 = $("<li id='list'>").text(response.meals[0].strIngredient5);
+      var ingredientList6 = $("<li id='list'>").text(response.meals[0].strIngredient6);
+      var ingredientList7 = $("<li id='list'>").text(response.meals[0].strIngredient7);
+      var ingredientList8 = $("<li id='list'>").text(response.meals[0].strIngredient8);
+      var ingredientList9 = $("<li id='list'>").text(response.meals[0].strIngredient9);
+      var ingredientList10 = $("<li id='list'>").text(response.meals[0].strIngredient10);
+      var ingredientList11 = $("<li id='list'>").text(response.meals[0].strIngredient11);
+
+
+      $(".Recipe").append(newRecipeName);
+      $(".Recipe").append(newRecipeImage);
+      $(".Recipe").append(foodCountry);
+      $(".Recipe").append(instructions);
+      $(".Recipe").append(mealInstructions);
+      $(".Recipe").append(ingredients);
+      $(".Recipe").append(ingredientList1);
+      $(".Recipe").append(ingredientList2);
+      $(".Recipe").append(ingredientList3);
+      $(".Recipe").append(ingredientList4);
+      $(".Recipe").append(ingredientList5);
+      $(".Recipe").append(ingredientList6);
+      $(".Recipe").append(ingredientList7);
+      $(".Recipe").append(ingredientList8);
+      $(".Recipe").append(ingredientList9);
+      $(".Recipe").append(ingredientList8);
+      $(".Recipe").append(ingredientList9);
+      $(".Recipe").append(ingredientList10);
+      $(".Recipe").append(ingredientList11);
+
+
+    });
+>>>>>>> 6ad4c04d9b591c2b6c8a17f4edd2fa7b6229d714
 
     var queryURL = "https://www.themealdb.com/api/json/v2/9973533/filter.php?i=" + ingredients
 
