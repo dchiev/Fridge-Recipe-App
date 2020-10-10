@@ -1,32 +1,49 @@
-#nav,#button{
+#nav{
     background-color:green;
-       
+}
+
+#recipe-nav, #facts-nav, #blog-nav, #about-nav{
+    color:white;
 }
 
 h1{
-    /* text-align:center; */
     color: white;
-    font-size:30px;
+    font-size:40px;
     font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+#recipe
+{
+   font-size:35px;
+   display:none;
 }
  #button{
     color:white;
     font-size: 15px;
     font-weight: bold;
     font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 180px;
+    height: 40px;
+    background-color: black;
+    float:right;
+    opacity: 1;
+
 }
 
-.container-list,.uk-margin, #button{
+.container-list{
     margin:auto;
-    width: 50%;
-    padding: 10px;
-    background-color: green;
+    width: 40%;
+    padding: 15px;
+    background-color: rgba(34, 121, 37, 0.8);
+ 
 }
-
 
 #input1,#input2,#input3{
     color: black;
-    border-color:black;
+    border:solid 3px black;
+    width: auto;
+    height:50px;
+    /* opacity: 1; */
 }
 
 #hero-image{
@@ -34,3 +51,20 @@ h1{
     height: 716px;
     opacity: 0.63;
 }
+
+#recipeImage{
+    width: 25%;
+    height:auto;
+    float:left;
+}
+
+#recipeName, #instructionLabel, #foodCountry, #ingredientLabel{
+    text-align: center;
+    font-size: 25px;
+}
+
+#instructions,#ingredients{
+    font-weight:bold;
+    text-align:justify;
+}
+
