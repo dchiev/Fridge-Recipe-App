@@ -7,7 +7,7 @@ var searchButton = $("#button");
 
 searchButton.on("click", function (event) {
   event.preventDefault();
-
+  $(".Recipe").empty();
   var ingredient1 = input1.val();
   var ingredient2 = input2.val();
   var ingredient3 = input3.val();
