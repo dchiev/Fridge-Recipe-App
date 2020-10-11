@@ -8,6 +8,7 @@ var searchButton = $("#button");
 searchButton.on("click", function (event) {
   event.preventDefault();
   $(".Recipe").empty();
+  $("#recipe").show();
   var ingredient1 = input1.val();
   var ingredient2 = input2.val();
   var ingredient3 = input3.val();
@@ -39,46 +40,47 @@ searchButton.on("click", function (event) {
       method: "GET"
     }).then(function (response) {
       console.log(response);
-      var newRecipeName = $("<h3 id='recipeName'>").text(response.meals[0].strMeal)
-      var newRecipeImage = $("<img id='recipeImage'>").attr("src", response.meals[0].strMealThumb);
-      var instructionLabel = $("<h3 id='instructionsLabel'>").text("Instructions: ");
-      var mealInstructions = $("<p id='instructions'>").text(response.meals[0].strInstructions);
-      var foodCountry = $("<h3 class='foodCountry'>").text("Cuisine: " + response.meals[0].strArea);
-      var ingredientLabel = $("<h3 id='ingredientLabel'>").text("Ingredients: ");
-      var ingredientList1 = $("<li id='ingredients'>").text(response.meals[0].strIngredient1);
-      var ingredientList2 = $("<li id='ingredients'>").text(response.meals[0].strIngredient2);
-      var ingredientList3 = $("<li id='ingredients'>").text(response.meals[0].strIngredient3);
-      var ingredientList4 = $("<li id='ingredients'>").text(response.meals[0].strIngredient4);
-      var ingredientList5 = $("<li id='ingredients'>").text(response.meals[0].strIngredient5);
-      var ingredientList6 = $("<li id='ingredients'>").text(response.meals[0].strIngredient6);
-      var ingredientList7 = $("<li id='ingredients'>").text(response.meals[0].strIngredient7);
-      var ingredientList8 = $("<li id='ingredients'>").text(response.meals[0].strIngredient8);
-      var ingredientList9 = $("<li id='ingredients'>").text(response.meals[0].strIngredient9);
-      var ingredientList10 = $("<li id='ingredients'>").text(response.meals[0].strIngredient10);
-      var ingredientList11 = $("<li id='ingredients'>").text(response.meals[0].strIngredient11);
+      $("#RecipeName").text(response.meals[0].strMeal)
+     var newRecipeImage= $("<img>").attr("src", response.meals[0].strMealThumb);
+      $("#instructionlabel").text("Instructions: ")
+       $("#mealInstructions").text(response.meals[0].strInstructions);
+     $("#RecipeCuisine").text("Country: ")
+      $("#RecipeCountry").text(response.meals[0].strArea);
+     $("#Ingredients").text("Ingredients: ");
+      var ingredientList1 = $("<li>").text(response.meals[0].strIngredient1);
+      var ingredientList2 = $("<li>").text(response.meals[0].strIngredient2);
+      var ingredientList3 = $("<li>").text(response.meals[0].strIngredient3);
+      var ingredientList4 = $("<li>").text(response.meals[0].strIngredient4);
+      var ingredientList5 =$("<li>").text(response.meals[0].strIngredient5);
+      var ingredientList6 = $("<li>").text(response.meals[0].strIngredient6);
+      var ingredientList7 =$("<li>").text(response.meals[0].strIngredient7);
+      var ingredientList8 = $("<li>").text(response.meals[0].strIngredient8);
+      var ingredientList9 =$("<li>").text(response.meals[0].strIngredient9);
+      var ingredientList10 =$("<li>").text(response.meals[0].strIngredient10);
+      
+      $("#recipe-img").prepend(newRecipeImage);
+      $("#ingredientsList").append(ingredientList1);
+      $("#ingredientsList").append(ingredientList2);
+      $("#ingredientsList").append(ingredientList3);
+      $("#ingredientsList").append(ingredientList4);
+      $("#ingredientsList").append(ingredientList5);
+      $("#ingredientsList").append(ingredientList6);
+      $("#ingredientsList").append(ingredientList7);
+      $("#ingredientsList").append(ingredientList8);
+      $("#ingredientsList").append(ingredientList9);
+      $("#ingredientsList").append(ingredientList10);
 
 
-      $(".Recipe").append(newRecipeName);
-      $(".Recipe").append(newRecipeImage);
-      $(".Recipe").append(instructionLabel);
-      $(".Recipe").append(mealInstructions);
-      $(".Recipe").append(foodCountry);
-      $(".Recipe").append(ingredientLabel);
-      $(".Recipe").append(ingredientList1);
-      $(".Recipe").append(ingredientList2);
-      $(".Recipe").append(ingredientList3);
-      $(".Recipe").append(ingredientList4);
-      $(".Recipe").append(ingredientList5);
-      $(".Recipe").append(ingredientList6);
-      $(".Recipe").append(ingredientList7);
-      $(".Recipe").append(ingredientList8);
-      $(".Recipe").append(ingredientList9);
-      $(".Recipe").append(ingredientList8);
-      $(".Recipe").append(ingredientList9);
-      $(".Recipe").append(ingredientList10);
-      $(".Recipe").append(ingredientList11);
+
+      /* $("#RecipeName").append(newRecipeName);
+      // $("#recipe-img").append(newRecipeImage);
+     $(".Recipe").append(instructionLabel);
+      $("#mealInstructions").append(mealInstructions);
+      $(".RecipeCuisine").append(foodCountry);
+      $("#Ing") */
 
 
+    
     });
 
 
