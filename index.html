@@ -14,13 +14,13 @@
 </head>
 
 <nav class="uk-navbar-container" id="nav" uk-navbar>
-    <h1 class="uk-heading-medium">Fridge App</h1>
+    <h1 class="uk-heading-medium heading">Fridge App</h1>
     <div class="uk-navbar-right">
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="#">Recipe</a></li>
-            <li class="uk-active"><a href="#">Facts</a></li>
-            <li class="uk-active"><a href="#">Blog</a></li>
-            <li class="uk-active"><a href="#">About</a></li>
+            <li class="uk-active"><a href="#" id="recipe-nav">Recipe</a></li>
+            <li class="uk-active"><a href="#" id="facts-nav">Facts</a></li>
+            <li class="uk-active"><a href="#" id="blog-nav">Blog</a></li>
+            <li class="uk-active"><a href="#" id="about-nav">About</a></li>
         </ul>
 
     </div>
@@ -28,74 +28,97 @@
 
 <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
     data-src="Pictures/FridgePiciture.jpeg" id="hero-image" uk-img>
-    <h1>Fridge Recipe</h1>
 
-    <div class="uk-margin">
-        <form class="uk-search uk-search-default">
-            <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input1">
-        </form>
-    </div>
+    <div class="uk-container">
+        <h1 id="h1">Fridge Recipe</h1>
 
-    <div class="uk-margin">
-        <form class="uk-search uk-search-default">
-            <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input2">
-        </form>
-    </div>
+        <div class="uk-margin">
+            <form class="uk-search uk-search-default">
+                <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input1">
+            </form>
+        </div>
 
-    <div class="uk-margin">
-        <form class="uk-search uk-search-default">
-            <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input3">
-        </form>
+        <div class="uk-margin">
+            <form class="uk-search uk-search-default">
+                <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input2">
+            </form>
+        </div>
+
+        <div class="uk-margin">
+            <form class="uk-search uk-search-default">
+                <input class="uk-search-input" type="ingredients" placeholder="Ingredients" id="input3">
+            </form>
+        </div>
+        <p uk-margin>
+            <button class="uk-button uk-button-primary" id="button">Search</button>
+        </p>
     </div>
-    <p uk-margin>
-        <button class="uk-button uk-button-primary" id="button">Search</button>
-    </p>
+</div>
+
+<div class="uk-card uk-card-default uk-card-large uk-card-body" id="main">
+    <!-- <div class="uk-container-test"> -->
+    <div class="uk-card uk-card-default">
+        <div class="uk-card-body">
+            <h3 class="uk-card-title" id="RecipeName"></h3>
+
+        </div>
+        <div class="uk-card-media-bottom" id="recipe-img">
+        </div>
+
+        <!-- <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" id="recipe-img"
+        uk-img>
+        <div class="uk-card uk-card-default uk-card-body">
+            <h1 class="uk-card-title" id="RecipeName"></h1>
+
+        </div> -->
+        <!-- <h1 id="RecipeName"></h1> -->
+
+        <!-- <div class="uk-card uk-card-default uk-card-small uk-card-body">
+            <h3 class="uk-card-title" id="RecipeCuisine"></h3>
+            <p id="RecipeCountry"></p>
+        </div> -->
+    </div>
+</div>
+<!-- </div> -->
+<div class="uk-card uk-card-default uk-card-large uk-card-body">
+    <div class="uk-container-recipe">
+        <div class="uk-card uk-card-default uk-card-small uk-card-body">
+            <div class="uk-card uk-card-default uk-card-body">
+                <h3 class="uk-card-title" id="RecipeCuisine"></h3>
+                <p id="RecipeCountry"></p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <h3 class="uk-card-title" id="instructionlabel"></h3>
+                <p id="mealInstructions"></p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <h3 class="uk-card-title" id="Ingredients"></h3>
+                <p id="ingredientsList"></p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- <div class="YoutubeRecipe"> -->
+<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+    <h3 class="uk-card-title" id="YoutubeName"></h3>
+    <p id="YoutubeImg"></p>
+    <p id="YoutubeVideo"></p>
+</div>
+
 </div>
 
 
+</div>
+<!-- </div> -->
 
+<body>
 
-<!-- <div class="Recipe"> -->
-    <div class="uk-card uk-card-default uk-card-large uk-card-body">
-        <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" id="recipe-img" uk-img>
-            <h1 id="RecipeName"></h1>
-          </div>
-          <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
-            <div>
-                <div class="uk-card uk-card-default uk-card-body">
-                    <h3 class="uk-card-title" id="RecipeCuisine"></h3>
-                    <p id="RecipeCountry"></p>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-default uk-card-body">
-                    <h3 class="uk-card-title" id="instructionlabel"></h3>
-                    <p id="mealInstructions"></p>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-default uk-card-body">
-                    <h3 class="uk-card-title" id="Ingredients"></h3>
-                    <p id="ingredientsList"></p>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="YoutubeRecipe"> -->
-            <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
-                <h3 class="uk-card-title" id="YoutubeName"></h3>
-                <p id="YoutubeImg"></p>
-                <p id="YoutubeVideo"></p>
-            </div>
-
-        <!-- </div> -->
-        
-
-    </div>
-    <!-- </div> -->
-
-    <body>
-
-        <script src="./script.js"></script>
-    </body>
+    <script src="./script.js"></script>
+</body>
 
 </html>
