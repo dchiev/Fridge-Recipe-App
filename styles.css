@@ -6,15 +6,17 @@
     color:white;
 }
 
-h1{
+.heading{
     color: white;
     font-size:40px;
     font-weight: bold;
-    font-family:Georgia, 'Times New Roman', Times, serif
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
 }
 
-#RecipeName {
+#RecipeName{
     color:black;
+    text-align:center;
 }
 
 #recipe
@@ -35,12 +37,19 @@ h1{
 
 }
 
-.container-list{
+.uk-container{
     margin:auto;
     width: 40%;
     padding: 15px;
-    background-color: rgba(34, 121, 37, 0.8);
- 
+    background-color:white;
+    border: 5px dotted green;
+    opacity: .75;
+ }
+
+#h1{
+    text-align:center;
+    color: black;
+    opacity:1;
 }
 
 #input1,#input2,#input3{
@@ -48,7 +57,9 @@ h1{
     border:solid 3px black;
     width: auto;
     height:50px;
-    /* opacity: 1; */
+    margin-left: 135px;
+    background: green;
+   
 }
 
 #hero-image{
@@ -56,20 +67,30 @@ h1{
     height: 716px;
     opacity: 0.63;
 }
-
-#recipeImage{
-    width: 25%;
-    height:auto;
-    float:left;
+#main{
+    margin-left: auto;
 }
 
-#recipeName, #instructionLabel, #foodCountry, #ingredientLabel{
+.uk-container-recipe{
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+#recipe-img{
+    width: 50%;
+    height:auto;
+    margin:auto;
+}
+
+#RecipeName, #instructionlabel, #RecipeCuisine, #Ingredients{
     text-align: center;
     font-size: 25px;
+    font-weight:bold;
 }
 
-#instructions,#ingredients{
+#mealInstructions,#ingredientsList,#RecipeCountry{
     font-weight:bold;
-    text-align:justify;
+    text-align:center;
 }
 
