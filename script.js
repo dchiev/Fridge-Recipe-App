@@ -58,7 +58,7 @@ searchButton.on("click", function (event) {
       var ingredientList9 =$("<li>").text(response.meals[0].strIngredient9);
       var ingredientList10 =$("<li>").text(response.meals[0].strIngredient10);
       
-      $("#recipe-img").prepend(newRecipeImage);
+      $("#recipe-img").append(newRecipeImage);
       $("#ingredientsList").append(ingredientList1);
       $("#ingredientsList").append(ingredientList2);
       $("#ingredientsList").append(ingredientList3);
