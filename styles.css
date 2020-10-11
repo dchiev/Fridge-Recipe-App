@@ -12,6 +12,11 @@ h1{
     font-weight: bold;
     font-family:Georgia, 'Times New Roman', Times, serif
 }
+
+#RecipeName {
+    color:black;
+}
+
 #recipe
 {
    font-size:35px;
