@@ -1,5 +1,7 @@
 # Fridge-Recipe-App
 
+![Fridge-Recipe-Screenshot](Pictures/screenshot.jpeg)
+
 # Description
 The Fridge Recipe App - This application is designed so that everyone can have a recipe to make with the ingredients they currently have in their fridge. Once the ingredients that are available have been searched a recipe is generated that includes: the country of origin, ingredients, instructions, a link to a Youtube video and a picture!
 
