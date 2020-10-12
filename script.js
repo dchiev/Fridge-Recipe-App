@@ -102,9 +102,9 @@ searchButton.on("click", function (event) {
       console.log(response.items[0].snippet.thumbnails.default.url)
       console.log("youtube.com/watch?v=" + (response.items[0].id.videoId))
 
-      $("#YoutubeImg").append(`<a href=${url}>${name}</a>`)
+      $("#YoutubeVideo").append(`<a href=${url}>${name}</a>`)
       var image = $("<img>").attr("src", thumbnail);
-      $("#YoutubeVideo").append(`<img src=${thumbnail}>`)
+      $("#YoutubeImg").append(`<img src=${thumbnail}>`)
     }
     )
   })

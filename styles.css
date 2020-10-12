@@ -2,11 +2,15 @@
     background-color:green;
 }
 
+.uk-card{
+    background-color: lightgreen;
+}
+
 #recipe-nav, #facts-nav, #blog-nav, #about-nav{
     color:white;
 }
 
-.heading{
+.heading, #YoutubeVideo{
     color: white;
     font-size:40px;
     font-weight: bold;
@@ -17,6 +21,8 @@
 #RecipeName{
     color:black;
     text-align:center;
+    font-size:50px;
+    font-weight: bold;
 }
 
 #recipe
@@ -71,26 +77,38 @@
     margin-left: auto;
 }
 
-.uk-container-recipe{
+.uk-container-recipe,.uk-container-Youtube{
     margin: auto;
     width: 100%;
     padding: 10px;
 }
 
-#recipe-img{
-    width: 50%;
-    height:auto;
-    margin:auto;
+img{ 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
 }
 
-#RecipeName, #instructionlabel, #RecipeCuisine, #Ingredients{
+ #instructionlabel, #RecipeCuisine, #Ingredients{
     text-align: center;
     font-size: 25px;
     font-weight:bold;
 }
 
-#mealInstructions,#ingredientsList,#RecipeCountry{
+/* #mealInstructions,#ingredientsList{
     font-weight:bold;
+    text-align:center;
+    color:white;
+} */
+
+#RecipeCountry,#mealInstructions,#ingredientsList{
+    color:white;
+    font-size: 25px;
     text-align:center;
 }
 
+/* #YoutubeImg{
+
+} */
