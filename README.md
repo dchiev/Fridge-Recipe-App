@@ -5,6 +5,8 @@
 # Description
 The Fridge Recipe App - This application is designed so that everyone can have a recipe to make with the ingredients they currently have in their fridge. Once the ingredients that are available have been searched a recipe is generated that includes: the country of origin, ingredients, instructions, a link to a Youtube video and a picture!
 
+Link to deployed application: https://dchiev.github.io/Fridge-Recipe-App/
+
 # Implementation
 Using the UI Kit as our framework we created a website that contained a nav bar and multiple containers. The first container holds the search area, which uses ajax functions to search 2 api databases to retrieve our recipe. Once the recipe is retreived the name and thumbnail of the recipe are in one container. The second container holds , the country of origin, the instructions and the ingredients. The last container holds the thumbnail for a Youtube video that matches the recipe and a direct link to that video. 
 
