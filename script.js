@@ -90,7 +90,7 @@ searchButton.on("click", function (event) {
     $.ajax({
 
 
-      url: "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=" + RecipeName + "&key=AIzaSyAjGXqIb18cuz-JAYTV2aoc4fePbZ9UHic",
+      url: "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=" + RecipeName + "&key=AIzaSyC1Xe-IzjAp8zLY0M09YXNCronqEYAL1ws",
 
       method: "GET"
     }).then(function (response) {
